@@ -1,0 +1,8 @@
+C:\Users\Łukasz\Downloads\HotelChatApi-VisualStudio\HotelChatApi-VS\HotelChatApi\obj\Debug\net10.0\HotelChatApi.csproj.AssemblyReference.cache
+C:\Users\Łukasz\Downloads\HotelChatApi-VisualStudio\HotelChatApi-VS\HotelChatApi\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Łukasz\Downloads\HotelChatApi-VisualStudio\HotelChatApi-VS\HotelChatApi\obj\Debug\net10.0\HotelChatApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Łukasz\Downloads\HotelChatApi-VisualStudio\HotelChatApi-VS\HotelChatApi\obj\Debug\net10.0\HotelChatApi.AssemblyInfoInputs.cache
+C:\Users\Łukasz\Downloads\HotelChatApi-VisualStudio\HotelChatApi-VS\HotelChatApi\obj\Debug\net10.0\HotelChatApi.AssemblyInfo.cs
+C:\Users\Łukasz\Downloads\HotelChatApi-VisualStudio\HotelChatApi-VS\HotelChatApi\obj\Debug\net10.0\HotelChatApi.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Downloads\HotelChatApi-VisualStudio\HotelChatApi-VS\HotelChatApi\obj\Debug\net10.0\HotelChatApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Łukasz\Downloads\HotelChatApi-VisualStudio\HotelChatApi-VS\HotelChatApi\obj\Debug\net10.0\HotelChatApi.MvcApplicationPartsAssemblyInfo.cache
