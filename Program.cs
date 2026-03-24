@@ -24,7 +24,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// ── Swagger (dostępny zawsze w Development) ───────────────
+// ── Swagger ───────────────────────────────────────────────
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -41,14 +41,39 @@ var app = builder.Build();
 // ── Middleware ─────────────────────────────────────────────
 app.UseCors("HotelWidgetPolicy");
 
-// Swagger zawsze włączony w trybie Development
+// ── API Key Middleware ─────────────────────────────────────
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path.StartsWithSegments("/api/chat"))
+    {
+        // Przepuść OPTIONS (preflight CORS)
+        if (context.Request.Method == "OPTIONS")
+        {
+            await next();
+            return;
+        }
+
+        var apiKey = context.Request.Headers["X-Api-Key"].FirstOrDefault();
+        var validKey = app.Configuration["ApiKey"];
+
+        if (string.IsNullOrEmpty(apiKey) || apiKey != validKey)
+        {
+            context.Response.StatusCode = 401;
+            await context.Response.WriteAsync("Unauthorized");
+            return;
+        }
+    }
+    await next();
+});
+
+// Swagger w trybie Development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotel Chat API v1");
-        c.RoutePrefix = "swagger"; // dostępne pod /swagger
+        c.RoutePrefix = "swagger";
     });
 }
 
